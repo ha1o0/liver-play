@@ -1,0 +1,35 @@
+/* components/liver-play/liver-play.wxss */
+.player-component {
+  position: relative;
+  width: 100%;
+}
+
+live-player {
+  z-index: 999;
+  position: relative;
+  width: 100%;
+}
+
+.control-bar {
+  background-color: rgba(30, 30, 30, 0.6);
+  position: absolute;
+}
+
+.control-btn {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.loading {
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+  left:0;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  font-size: 20rpx;
+}

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view>HKS 正在直播</view> -->
+  <liver-play src="{{rtmpUrl}}" /> 
+</view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "liver-play": "../../components/liver-play/liver-play"
+  }
+}

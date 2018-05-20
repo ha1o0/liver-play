@@ -1,0 +1,32 @@
+<!--components/liver-play/liver-play.wxml-->
+<view catchtap="handleControlBar" class="player-component" style="height:{{playerComponentHeight}};">
+  <live-player id="liver-play" src="{{src}}" mode="live" autoplay 
+    bindstatechange="stateChange" binderror="error"
+    bindnetstatus="netChange" bindfullscreenchange="fullScreenChange"
+    orientation="{{orientation}}" style="height:{{playerComponentHeight}};">
+    <cover-view wx:if="{{showControlBar}}" class="control-bar" style="height:{{controlBarHeight}};width:{{controlBarWidth}};top:{{controlBarTop}}">
+      <cover-image catchtap="bindPlay" class="control-btn"
+        src="../../images/{{isPlay ? (isNeedRotate ? 'pauseFull' : 'pause') : (isNeedRotate ? 'playFull' : 'play')}}1.png"
+        style="left:{{playBtnLeft}};top:{{playBtnTop}};-webkit-transform:rotate({{playBtnRotate}}deg);">
+      </cover-image>
+      <cover-image catchtap= "bindRefresh" class="control-btn"
+        src="../../images/refresh1.png" 
+        style="left:{{refreshBtnLeft}};top:{{refreshBtnTop}}">
+      </cover-image>
+      <cover-image catchtap= "bindMute" class="control-btn"
+        src="../../images/{{isMute ? (isNeedRotate ? 'muteFull' : 'mute') : (isNeedRotate ? 'unmuteFull' : 'unmute')}}1.png"
+        style="left:{{muteBtnLeft}};top:{{muteBtnTop}}">
+      </cover-image>
+      <cover-image catchtap= "bindFullScreen" class="control-btn" 
+        src="../../images/fullScreen1.png" 
+        style="left:{{fullBtnLeft}};top:{{fullBtnTop}}">
+      </cover-image>
+    </cover-view>
+    <cover-view class='loading' wx:if="{{isLoading}}">
+      正在加载...
+      <!-- <cover-image src='../../images/loading.gif'></cover-image> -->
+    </cover-view>
+  </live-player>
+   
+   <!-- <button catchtap="bindTest">test</button>   -->
+</view>
